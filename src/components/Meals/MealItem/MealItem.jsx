@@ -1,8 +1,9 @@
 import React from "react";
 import classes from "./MealItem.module.css";
+import MealItemForm from "./MealItemForm";
 
 export default function MealItem({ meal }) {
-  const { name, description, price } = meal;
+  const { id, name, description, price } = meal;
   const formattedPrice = `$${price.toFixed(2)}`;
   return (
     <li className={classes.meal}>
@@ -11,7 +12,9 @@ export default function MealItem({ meal }) {
         <div className={classes.description}>{description}</div>
         <div className={classes.price}>{formattedPrice}</div>
       </div>
-      <div></div>
+      <div>
+        <MealItemForm mealId={id} />
+      </div>
     </li>
   );
 }
