@@ -13,7 +13,7 @@ export default function MealItem({ meal }) {
         <div className={classes.price}>{formattedPrice}</div>
       </div>
       <div>
-        <MealItemForm mealId={id} />
+        <MealItemForm meal={meal} />
       </div>
     </li>
   );
